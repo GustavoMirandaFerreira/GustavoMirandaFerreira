@@ -1,6 +1,6 @@
 # Olá, sou o Gustavo Miranda 👋
 
-**Especialista em Automação e IA Aplicada | Integração de Sistemas**<br>
+**Especialista em Automação e IA Aplicada | LLMs, RAG e Integração de Sistemas**<br>
 📍 São Bernardo do Campo, SP — Remoto &nbsp;·&nbsp; disponível para oportunidades
 
 ---
@@ -11,11 +11,17 @@ Analista e Desenvolvedor de Sistemas com **mais de 10 anos de experiência** em 
 
 O que me diferencia é transitar com naturalidade entre **operação, sustentação e desenvolvimento** — entendo o problema do negócio, investigo a causa raiz e entrego a solução técnica. Sem depender de times separados para cada etapa.
 
-Atualmente construindo soluções que transformam processos de **20 minutos em menos de 2**, combinando automação, APIs e IA aplicada.
+Desenvolvo soluções de **IA aplicada** com modelos de linguagem (LLMs), arquitetura Transformer, RAG (geração aumentada por recuperação), fine-tuning e agentes de IA. Integro modelos, fontes de dados e APIs a fluxos de automação com Python e n8n.
+
+Na Mesa de Operação MVNO, ajudei a reduzir consultas de **15–20 minutos para menos de 2** ao integrar seis sistemas em uma interface.
 
 ---
 
 ### Stack principal
+
+**IA aplicada:** LLMs · RAG · Transformers · Fine-tuning · Agentes de IA
+
+**Automação:** Python · n8n · FastAPI · APIs REST
 
 ![Python](https://img.shields.io/badge/Python-0e1318?style=flat-square&logo=python&logoColor=5ac8fa)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0e1318?style=flat-square&logo=fastapi&logoColor=3be08b)
