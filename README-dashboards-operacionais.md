@@ -20,7 +20,7 @@ Nada de frameworks pesados para uma tela interna. Menos é mais.
 
 ```
 dashboards-operacionais/
-├── 📁 mesa-consulta/           # Interface de consulta unificada (base da Mesa MVNO)
+├── 📁 mesa-consulta/           # Interface de consulta unificada (base da plataforma unificada)
 ├── 📁 monitor-apis/            # Dashboard de saúde de APIs em tempo real
 ├── 📁 status-board/            # Board de status operacional por sistema
 ├── 📁 rca-template/            # Template HTML para relatórios de RCA
@@ -32,7 +32,7 @@ dashboards-operacionais/
 
 ## 🖥️ mesa-consulta
 
-Interface de consulta unificada — o padrão de UI usado na **Mesa de Operação MVNO**.
+Interface de consulta unificada — o padrão de UI usado na **Plataforma Unificada de Consulta**.
 
 **Características:**
 - Campo de busca único com validação em tempo real
@@ -51,11 +51,11 @@ Resultados:
 ┌──────────────┬────────────┬──────────────────┐
 │ Sistema      │ Status     │ Dados            │
 ├──────────────┼────────────┼──────────────────┤
-│ Ascendon     │ ✅ 342ms   │ ACTIVE · Cycle 7 │
-│ ECMS         │ ✅ 178ms   │ Plano: Nubank 40 │
-│ PCF          │ ✅ 201ms   │ Perfil: PREPAGO  │
-│ OCS          │ ✅ 156ms   │ Saldo: R$ 12,50  │
-│ SPSWeb       │ ✅ 1.8s    │ Status: REGULAR  │
+│ Sistema A    │ ✅ 342ms   │ Status: ATIVO    │
+│ Sistema B    │ ✅ 178ms   │ Dado validado    │
+│ Sistema C    │ ✅ 201ms   │ Perfil: PADRÃO   │
+│ Sistema D    │ ✅ 156ms   │ Limite: OK       │
+│ Aplicação Web│ ✅ 1.8s    │ Status: REGULAR  │
 └──────────────┴────────────┴──────────────────┘
 ```
 
@@ -69,9 +69,9 @@ Dashboard em tempo real para monitoramento de APIs — atualização automática
 <!-- Uso básico: só aponte para seu backend -->
 <script>
   const APIS = [
-    { name: 'Ascendon',  url: '/api/health/ascendon' },
-    { name: 'ECMS',      url: '/api/health/ecms'     },
-    { name: 'PCF',       url: '/api/health/pcf'      },
+    { name: 'Sistema A', url: '/api/health/system-a' },
+    { name: 'Sistema B', url: '/api/health/system-b' },
+    { name: 'Sistema C', url: '/api/health/system-c' },
   ];
   const INTERVAL_MS = 30000; // atualiza a cada 30s
 </script>
@@ -87,7 +87,7 @@ Dashboard em tempo real para monitoramento de APIs — atualização automática
 
 ## 📋 rca-template
 
-Template HTML para geração de relatórios de RCA (Root Cause Analysis) — usado para documentar incidentes em ambiente MVNO.
+Template HTML para geração de relatórios de RCA (Root Cause Analysis) — usado para documentar incidentes em operações críticas.
 
 **Seções do template:**
 1. Resumo executivo (impacto, duração, sistemas afetados)
@@ -191,6 +191,6 @@ Cores e variáveis CSS usadas em todos os componentes:
 ## 👤 Autor
 
 **Gustavo Miranda**  
-Desenvolvedor de Automação | Inteligência Operacional | Full Stack  
+Especialista em Automação e IA Aplicada | Integração de Sistemas<br>
 📍 São Bernardo do Campo, SP — Remoto  
 🔗 [LinkedIn](https://www.linkedin.com/in/gustavo-miranda-84178bb5/)

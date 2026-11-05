@@ -1,6 +1,6 @@
-# 🖥️ Mesa de Operação MVNO
+# 🖥️ Plataforma Unificada de Consulta
 
-> Interface de consulta unificada para aprovisionamento da operação **MVNO Nubank Claro** — desenvolvida para transformar um processo de 20 minutos em menos de 2.
+> Interface unificada para consultas e validações em uma **operação de alta complexidade** — desenvolvida para transformar um processo de 20 minutos em menos de 2.
 
 ---
 
@@ -17,13 +17,13 @@
 
 ## 🧩 O Problema
 
-No dia a dia da operação MVNO, cada consulta de aprovisionamento exigia um processo totalmente manual:
+No dia a dia da operação, cada consulta de aprovisionamento exigia um processo totalmente manual:
 
 - ❌ Gerar **3 tokens OAuth** manualmente (um por sistema)
-- ❌ Coletar dados no **Ascendon** um a um
+- ❌ Coletar dados no **sistema de origem** um a um
 - ❌ Chamar **5 APIs separadas** com dados copiados entre telas
-- ❌ Comparar **CycleDays entre sistemas** na mão, sujeito a erro humano
-- ❌ Abrir e navegar no **SPSWeb** manualmente
+- ❌ Comparar **parâmetros críticos entre sistemas** na mão, sujeito a erro humano
+- ❌ Abrir e navegar em um **sistema complementar** manualmente
 - ⏱️ **Total: 15 a 20 minutos por consulta**
 
 Além do tempo perdido, o processo exigia que o operador conhecesse todas as APIs, fluxos e sistemas envolvidos — criando dependência de especialistas.
@@ -32,12 +32,12 @@ Além do tempo perdido, o processo exigia que o operador conhecesse todas as API
 
 ## ✅ A Solução
 
-A **Mesa de Operação MVNO** é uma plataforma web interna que centraliza tudo em **1 campo + 1 clique**:
+A **Plataforma Unificada de Consulta** é uma plataforma web interna que centraliza tudo em **1 campo + 1 clique**:
 
 - ✅ Token OAuth gerado automaticamente (sem intervenção manual)
 - ✅ 6 sistemas consultados em paralelo e simultaneamente
-- ✅ CycleDays validados e cruzados automaticamente entre sistemas
-- ✅ SPSWeb navegado via **Playwright** (automação de browser headless)
+- ✅ Parâmetros críticos validados e cruzados automaticamente entre sistemas
+- ✅ Sistema complementar navegado via **Playwright** (automação de browser headless)
 - ✅ Resultado completo apresentado com **status visual** por sistema
 - ⚡ **Total: menos de 2 minutos**
 
@@ -50,7 +50,7 @@ Backend      → Python · FastAPI
 Automação    → Playwright (browser headless)
 Auth         → OAuth 2.0 (geração automática de tokens)
 Frontend     → HTML · CSS · JavaScript (vanilla)
-Integração   → APIs REST (Ascendon · ECMS · PCF · OCS · SPSWeb)
+Integração   → APIs REST e automação de sistema web complementar
 ```
 
 ---
@@ -68,13 +68,13 @@ Integração   → APIs REST (Ascendon · ECMS · PCF · OCS · SPSWeb)
         ┌────────────┼────────────┐
         │            │            │
    OAuth Manager  Playwright   API Router
-   (auto-token)   (SPSWeb)   (REST calls)
+   (auto-token)   (Web app)  (REST calls)
         │            │            │
    ┌────┴────┐   ┌───┴───┐   ┌───┴────────────┐
-   │ Ascendon│   │SPSWeb │   │ ECMS·PCF·OCS   │
+   │Sistema A│   │Web app│   │ Sistemas B·C·D │
    └─────────┘   └───────┘   └────────────────┘
         │
-   CycleDays Validator
+   Critical Data Validator
    (cross-system comparison)
 ```
 
@@ -84,8 +84,8 @@ Integração   → APIs REST (Ascendon · ECMS · PCF · OCS · SPSWeb)
 
 ```bash
 # Clone o repositório
-git clone https://github.com/SEU_USUARIO/mesa-operacao-mvno.git
-cd mesa-operacao-mvno
+git clone https://github.com/SEU_USUARIO/plataforma-consulta.git
+cd plataforma-consulta
 
 # Crie o ambiente virtual
 python -m venv venv
@@ -117,11 +117,11 @@ CLIENT_ID=seu_client_id
 CLIENT_SECRET=seu_client_secret
 
 # URLs dos sistemas (configuráveis por ambiente)
-ASCENDON_URL=https://...
+SOURCE_SYSTEM_URL=https://...
 ECMS_URL=https://...
 PCF_URL=https://...
 OCS_URL=https://...
-SPSWEB_URL=https://...
+WEB_APP_URL=https://...
 
 # Configurações gerais
 TOKEN_REFRESH_INTERVAL=3600
@@ -133,7 +133,7 @@ LOG_LEVEL=INFO
 ## 📁 Estrutura do projeto
 
 ```
-mesa-operacao-mvno/
+plataforma-consulta/
 ├── main.py                  # Entry point FastAPI
 ├── requirements.txt
 ├── .env.example
@@ -141,13 +141,13 @@ mesa-operacao-mvno/
 │   ├── auth/
 │   │   └── oauth.py         # Geração automática de tokens
 │   ├── integrations/
-│   │   ├── ascendon.py      # Consultas Ascendon
-│   │   ├── ecms.py
-│   │   ├── pcf.py
-│   │   ├── ocs.py
-│   │   └── spsweb.py        # Automação Playwright
+│   │   ├── source_system.py # Consultas ao sistema de origem
+│   │   ├── system_b.py
+│   │   ├── system_c.py
+│   │   ├── system_d.py
+│   │   └── web_app.py       # Automação Playwright
 │   ├── validators/
-│   │   └── cycledays.py     # Validação cruzada CycleDays
+│   │   └── critical_data.py # Validação cruzada de dados críticos
 │   └── routers/
 │       └── consulta.py      # Endpoints da API
 ├── frontend/
@@ -162,7 +162,7 @@ mesa-operacao-mvno/
 
 ## 📈 Resultados em produção
 
-Este projeto está em uso na operação MVNO Nubank Claro desde **maio de 2026**, com adoção total da equipe e os seguintes resultados mensurados:
+Este projeto está em produção desde **maio de 2026**, com adoção total da equipe e os seguintes resultados mensurados:
 
 - Redução de **90%** no tempo médio por consulta
 - Eliminação de erros por copy-paste manual entre sistemas
@@ -174,6 +174,6 @@ Este projeto está em uso na operação MVNO Nubank Claro desde **maio de 2026**
 ## 👤 Autor
 
 **Gustavo Miranda**  
-Desenvolvedor de Automação | Inteligência Operacional | Full Stack  
+Especialista em Automação e IA Aplicada | Integração de Sistemas<br>
 📍 São Bernardo do Campo, SP — Remoto  
 🔗 [LinkedIn](https://www.linkedin.com/in/gustavo-miranda-84178bb5/)

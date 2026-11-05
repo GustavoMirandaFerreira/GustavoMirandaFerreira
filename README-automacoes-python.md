@@ -34,7 +34,7 @@ Testes         → Pytest
 
 ## 🔑 oauth-token-manager
 
-Módulo reutilizável para geração, cache e renovação automática de tokens OAuth 2.0. Desenvolvido originalmente para a operação MVNO Nubank Claro, onde múltiplos sistemas exigiam tokens independentes.
+Módulo reutilizável para geração, cache e renovação automática de tokens OAuth 2.0. Desenvolvido originalmente para uma operação de alta complexidade, na qual múltiplos sistemas exigiam tokens independentes.
 
 **Funcionalidades:**
 - Suporte a múltiplos `client_id / client_secret` simultaneamente
@@ -77,7 +77,7 @@ python api_monitor.py --config apis.yaml --interval 60
 Pipelines ETL desenvolvidos para sincronização entre sistemas heterogêneos (Oracle, SQL Server, arquivos CSV/Excel).
 
 **Casos de uso reais:**
-- Sincronização Totalbus ↔ SAP (Grupo Comporte)
+- Sincronização entre sistema de gestão e SAP
 - Extração de dados de sistemas legados para BI (Targit / Tableau)
 - Carga incremental com controle de duplicatas
 
@@ -85,7 +85,7 @@ Pipelines ETL desenvolvidos para sincronização entre sistemas heterogêneos (O
 
 ## 🔍 log-analyzer
 
-Parser de logs para investigação de causa raiz (RCA) de incidentes em ambientes de telecomunicações. Desenvolvido para análise de fluxos do Orchestrator Ascendon.
+Parser de logs para investigação de causa raiz (RCA) de incidentes em ambientes de alta complexidade. Desenvolvido para análise de fluxos entre sistemas integrados.
 
 **Funcionalidades:**
 - Parsing de logs em múltiplos formatos (JSON, texto estruturado, syslog)
@@ -132,8 +132,8 @@ pytest tests/ -v
 
 Estas automações foram desenvolvidas durante atuação em:
 
-- **Hitss Brasil / MVNO Nubank Claro** (2024–presente) — automações operacionais em Python
-- **Grupo Comporte** (2020–2024) — ETL, integração SAP, automação UiPath
+- **Empresa de tecnologia** (2024–presente) — automações operacionais em Python
+- **Grupo empresarial** (2020–2024) — ETL, integração SAP e automação UiPath
 - **Linx S.A.** (2016–2019) — scripts de suporte à implantação de ERP
 
 ---
@@ -141,6 +141,6 @@ Estas automações foram desenvolvidas durante atuação em:
 ## 👤 Autor
 
 **Gustavo Miranda**  
-Desenvolvedor de Automação | Inteligência Operacional | Full Stack  
+Especialista em Automação e IA Aplicada | Integração de Sistemas<br>
 📍 São Bernardo do Campo, SP — Remoto  
 🔗 [LinkedIn](https://www.linkedin.com/in/gustavo-miranda-84178bb5/)

@@ -1,7 +1,7 @@
 # Olá, sou o Gustavo Miranda 👋
 
-**Desenvolvedor de Automação | Inteligência Operacional | Full Stack**  
-📍 São Bernardo do Campo, SP — Remoto &nbsp;·&nbsp; 🏢 Hitss Brasil / MVNO Nubank Claro
+**Especialista em Automação e IA Aplicada | Integração de Sistemas**<br>
+📍 São Bernardo do Campo, SP — Remoto &nbsp;·&nbsp; disponível para oportunidades
 
 ---
 
@@ -11,7 +11,7 @@ Analista e Desenvolvedor de Sistemas com **mais de 10 anos de experiência** em 
 
 O que me diferencia é transitar com naturalidade entre **operação, sustentação e desenvolvimento** — entendo o problema do negócio, investigo a causa raiz e entrego a solução técnica. Sem depender de times separados para cada etapa.
 
-Atualmente construindo ferramentas que transformam processos de **20 minutos em menos de 2** na operação MVNO Nubank Claro.
+Atualmente construindo soluções que transformam processos de **20 minutos em menos de 2**, combinando automação, APIs e IA aplicada.
 
 ---
 
@@ -35,7 +35,7 @@ Atualmente construindo ferramentas que transformam processos de **20 minutos em 
 
 | Repositório | O que é | Stack |
 |---|---|---|
-| [🖥️ mesa-operacao-mvno](https://github.com/SEU_USUARIO/mesa-operacao-mvno) | Interface unificada que integra 6 sistemas MVNO em 1 clique — 90% menos tempo, ~200h/mês economizadas | Python · FastAPI · Playwright · OAuth 2.0 |
+| [🖥️ plataforma-unificada](https://gustavomirandaferreira.github.io/#projects) | Interface unificada que integra 6 sistemas em 1 clique — 90% menos tempo, ~200h/mês economizadas | Python · FastAPI · Playwright · OAuth 2.0 |
 | [🐍 automacoes-python](https://github.com/SEU_USUARIO/automacoes-python) | Coleção de automações: OAuth manager, log analyzer, ETL scripts, report generator | Python · Pandas · APScheduler |
 | [🔗 api-integrations](https://github.com/SEU_USUARIO/api-integrations) | Padrões reutilizáveis de integração REST — retry, circuit breaker, validação de contrato | Python · Requests · JSONSchema |
 | [📊 dashboards-operacionais](https://github.com/SEU_USUARIO/dashboards-operacionais) | Templates de ferramentas web internas — monitor de APIs, SLA tracker, RCA template | HTML · CSS · JS Vanilla |
@@ -46,9 +46,9 @@ Atualmente construindo ferramentas que transformam processos de **20 minutos em 
 
 ```
 10+ anos    →  experiência em integração e sustentação de sistemas
-~200h/mês   →  economizadas com automação na operação MVNO
+~200h/mês   →  economizadas com automação de processos
 90%         →  redução de tempo em consultas operacionais
-6 sistemas  →  integrados simultaneamente na Mesa de Operação MVNO
+6 sistemas  →  integrados simultaneamente na plataforma unificada
 ```
 
 ---
@@ -56,11 +56,11 @@ Atualmente construindo ferramentas que transformam processos de **20 minutos em 
 ### Experiência
 
 ```
-2026 – presente  →  Desenvolvedor de Automação | Inteligência Operacional   @ Hitss Brasil / MVNO Nubank
-2024 – 2026      →  Analista de Sistemas Pleno                              @ Hitss Brasil / MVNO Nubank
-2020 – 2024      →  Analista de Sistemas                                    @ Grupo Comporte
-2016 – 2019      →  Coordenador de Projetos                                 @ Linx S.A.
-2015 – 2016      →  Analista de Sistemas                                    @ Assistec Informática
+2026 – presente  →  Especialista em Automação e Inteligência Operacional       @ Empresa de tecnologia
+2024 – 2026      →  Analista de Sistemas Pleno                              @ Empresa de tecnologia
+2020 – 2024      →  Analista de Sistemas                                    @ Grupo empresarial
+2016 – 2019      →  Coordenador de Projetos                                 @ Empresa de software
+2015 – 2016      →  Analista de Sistemas                                    @ Consultoria de tecnologia
 ```
 
 ---

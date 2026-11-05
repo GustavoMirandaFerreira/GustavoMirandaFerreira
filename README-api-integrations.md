@@ -6,7 +6,7 @@
 
 ## 🧠 Por que este repositório existe
 
-Ao longo de anos trabalhando com integração de sistemas — Ascendon, ECMS, PCF, OCS, SAP, Totalbus — aprendi na prática o que funciona e o que quebra em produção. Este repositório consolida esses padrões de forma reutilizável.
+Ao longo de anos trabalhando com integração entre APIs, ERPs, aplicações web e serviços em nuvem, aprendi na prática o que funciona e o que quebra em produção. Este repositório consolida esses padrões de forma reutilizável.
 
 ---
 
@@ -31,7 +31,7 @@ api-integrations/
 │   └── alert_sender.py               # Envio de alertas (webhook/e-mail)
 │
 ├── 📁 examples/
-│   ├── telecomunicacoes/              # Padrões usados em ambiente MVNO
+│   ├── operacoes-digitais/              # Padrões para integrações críticas
 │   ├── erp_sap/                       # Integração com sistemas ERP
 │   └── cloud_aws/                     # Integrações com serviços AWS
 │
@@ -86,11 +86,11 @@ from patterns.payload_validator import validate_payload
 
 schema = {
     "type": "object",
-    "required": ["msisdn", "status", "cycleDays"],
+    "required": ["customerId", "status", "processingWindow"],
     "properties": {
-        "msisdn": {"type": "string"},
+        "customerId": {"type": "string"},
         "status": {"type": "string", "enum": ["ACTIVE", "SUSPENDED", "CANCELLED"]},
-        "cycleDays": {"type": "integer", "minimum": 1}
+        "processingWindow": {"type": "integer", "minimum": 1}
     }
 }
 
@@ -112,8 +112,8 @@ python monitoring/contract_tester.py --interval 300
 
 # Resultado
 ✅  POST /api/consulta        → 200 OK  · 342ms · Schema válido
-✅  GET  /api/status/{msisdn} → 200 OK  · 178ms · Schema válido
-⚠️  GET  /api/cycledays       → 200 OK  · 2341ms · LENTO (threshold: 1000ms)
+✅  GET  /api/status/{customerId} → 200 OK  · 178ms · Schema válido
+⚠️  GET  /api/processing-window  → 200 OK  · 2341ms · LENTO (threshold: 1000ms)
 ❌  POST /api/provisioning     → 503     · Sistema indisponível
 ```
 
@@ -176,6 +176,6 @@ Importe diretamente no Postman: `File → Import → selecione o arquivo .json`
 ## 👤 Autor
 
 **Gustavo Miranda**  
-Desenvolvedor de Automação | Inteligência Operacional | Full Stack  
+Especialista em Automação e IA Aplicada | Integração de Sistemas<br>
 📍 São Bernardo do Campo, SP — Remoto  
 🔗 [LinkedIn](https://www.linkedin.com/in/gustavo-miranda-84178bb5/)
